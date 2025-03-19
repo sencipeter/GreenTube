@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greentube.Wallet.Api", "Greentube.Wallet.Api\Greentube.Wallet.Api.csproj", "{10AC410F-CFD7-4863-9F40-FE256828CED5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greentube.Wallet.Model", "Greentube.Wallet.Model\Greentube.Wallet.Model.csproj", "{98265B4D-8369-49E2-8127-A732F640B0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greentube.Wallet.Services", "Greentube.Wallet.Services\Greentube.Wallet.Services.csproj", "{6337DC9B-7199-4876-A9B1-6081642CC5B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Greentube.Wallet.Infrastructure", "Greentube.Wallet.Infrastructure\Greentube.Wallet.Infrastructure.csproj", "{61F37481-E70F-4CBA-9E4F-3A46DBFE8A05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10AC410F-CFD7-4863-9F40-FE256828CED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10AC410F-CFD7-4863-9F40-FE256828CED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10AC410F-CFD7-4863-9F40-FE256828CED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10AC410F-CFD7-4863-9F40-FE256828CED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98265B4D-8369-49E2-8127-A732F640B0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98265B4D-8369-49E2-8127-A732F640B0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98265B4D-8369-49E2-8127-A732F640B0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98265B4D-8369-49E2-8127-A732F640B0C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6337DC9B-7199-4876-A9B1-6081642CC5B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6337DC9B-7199-4876-A9B1-6081642CC5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6337DC9B-7199-4876-A9B1-6081642CC5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6337DC9B-7199-4876-A9B1-6081642CC5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F37481-E70F-4CBA-9E4F-3A46DBFE8A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F37481-E70F-4CBA-9E4F-3A46DBFE8A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F37481-E70F-4CBA-9E4F-3A46DBFE8A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F37481-E70F-4CBA-9E4F-3A46DBFE8A05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
