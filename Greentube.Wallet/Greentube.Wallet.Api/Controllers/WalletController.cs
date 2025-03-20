@@ -42,6 +42,8 @@ namespace Greentube.Wallet.Api.Controllers
         {
             var query = new GetPlayerBalanceQuery { PlayerId = playerId };
             var balance = _getPlayerBalanceHandler.Handle(query);
+            if (balance is null)
+                return NotFound();
             return Ok(balance);
         }
 

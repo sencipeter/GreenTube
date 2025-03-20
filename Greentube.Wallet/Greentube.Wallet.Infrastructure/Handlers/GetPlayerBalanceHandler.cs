@@ -14,10 +14,10 @@ namespace Greentube.Wallet.Infrastructure.Handlers
             _playerRepository = playerRepository;
         }
 
-        public PlayerBalanceDto Handle(GetPlayerBalanceQuery query)
+        public PlayerBalanceDto? Handle(GetPlayerBalanceQuery query)
         {
             var player = _playerRepository.GetPlayer(query.PlayerId);
-            return new PlayerBalanceDto { PlayerId = player.Id, Balance = player.Balance };
+            return player is null ? null :  new PlayerBalanceDto { PlayerId = player.Id, Balance = player.Balance };
         }
     }
 }

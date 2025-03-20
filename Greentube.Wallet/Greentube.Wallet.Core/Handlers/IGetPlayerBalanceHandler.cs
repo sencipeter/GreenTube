@@ -5,6 +5,6 @@ namespace Greentube.Wallet.Core.Handlers
 {
     public interface IGetPlayerBalanceHandler
     {
-        PlayerBalanceDto Handle(GetPlayerBalanceQuery query);
+        PlayerBalanceDto? Handle(GetPlayerBalanceQuery query);
     }
 }

@@ -1,6 +1,8 @@
-@Greentube.Wallet.Api_HostAddress = http://localhost:5052
+@Greentube.Wallet.Api_HostAddress = https://localhost:32771
+@playerId = b621d9bf-e3cc-4af8-2be8-73f6b1608f68
 
-GET {{Greentube.Wallet.Api_HostAddress}}/weatherforecast/
+GET {{Greentube.Wallet.Api_HostAddress}}/api/wallet/{{playerId}}/balance
 Accept: application/json
 
 ###
+GET http://localhost:32770/api/wallet/b621d9bf-e3cc-4af8-2be8-73f6b1608f68/balance
