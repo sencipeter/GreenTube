@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.3" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Greentube.Wallet.Core\Greentube.Wallet.Core.csproj" />
     <ProjectReference Include="..\Greentube.Wallet.Model\Greentube.Wallet.Model.csproj" />
   </ItemGroup>
 

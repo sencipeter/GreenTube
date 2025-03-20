@@ -10,7 +10,14 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.3" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Greentube.Wallet.Core\Greentube.Wallet.Core.csproj" />
+    <ProjectReference Include="..\Greentube.Wallet.Infrastructure\Greentube.Wallet.Infrastructure.csproj" />
+    <ProjectReference Include="..\Greentube.Wallet.Model\Greentube.Wallet.Model.csproj" />
   </ItemGroup>
 
 </Project>

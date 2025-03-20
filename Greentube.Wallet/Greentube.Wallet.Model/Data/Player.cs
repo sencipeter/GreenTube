@@ -2,7 +2,7 @@
 {
     public class Player
     {
-        public Guid PlayerId { get; set; }
+        public Guid Id { get; set; }
         public decimal Balance { get; set; }
     }
 }
