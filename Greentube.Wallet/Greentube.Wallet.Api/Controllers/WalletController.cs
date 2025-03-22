@@ -27,7 +27,7 @@ namespace Greentube.Wallet.Api.Controllers
         }
 
         [HttpPost("register")]
-        public IActionResult RegisterWallet([FromBody] RegisterWalletCommand command)
+        public IActionResult RegisterWallet(RegisterWalletCommand command)
         {
             var result = _registerWalletHandler.Handle(command);
             if (!result)
@@ -51,6 +51,8 @@ namespace Greentube.Wallet.Api.Controllers
         public IActionResult CreditTransaction([FromBody] CreditTransactionCommand command)
         {
             var result = _creditTransactionHandler.Handle(command);
+            if (result is null)
+                return NotFound();
             return Ok(result);
         }
 

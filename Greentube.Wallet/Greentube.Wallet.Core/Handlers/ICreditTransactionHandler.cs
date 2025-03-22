@@ -5,6 +5,6 @@ namespace Greentube.Wallet.Core.Handlers
 {
     public interface ICreditTransactionHandler
     {
-        TransactionResultDto Handle(CreditTransactionCommand command);
+        TransactionResultDto? Handle(CreditTransactionCommand command);
     }
 }

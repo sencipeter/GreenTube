@@ -1,8 +1,66 @@
 @Greentube.Wallet.Api_HostAddress = https://localhost:32771
 @playerId = b621d9bf-e3cc-4af8-2be8-73f6b1608f68
+@transactionId1 = 4a0f924b-e3e9-41da-9f2c-a9a5c428781a
+@transactionId2 = d8f60c60-bf03-450e-8212-c5a7c9d70f2f
+@transactionId3 = 55a3d779-8da6-4b09-837c-0cf062930eb3
+@transactionId4 = 9e1bdc7e-dfae-46a3-92a9-ccfb01f65580
+@transactionId5 = 46bb7e39-e32a-40ea-a40f-184d115f110e
+@deposit = 0
+@stake = 1
+@win = 2
 
+POST {{Greentube.Wallet.Api_HostAddress}}/api/wallet/register
+Content-Type: application/json
+{
+    "playerId": "{{playerId}}"
+}
+
+###
 GET {{Greentube.Wallet.Api_HostAddress}}/api/wallet/{{playerId}}/balance
 Accept: application/json
 
 ###
-GET http://localhost:32770/api/wallet/b621d9bf-e3cc-4af8-2be8-73f6b1608f68/balance
+POST {{Greentube.Wallet.Api_HostAddress}}/api/wallet/transaction
+Content-Type: application/json
+{
+    "playerId": "{{playerId}}",
+    "type": {{deposit}},
+    "amount": 100
+}
+
+###
+POST {{Greentube.Wallet.Api_HostAddress}}/api/wallet/transaction
+Content-Type: application/json
+{
+    "transactionId": "{{transactionId1}}",
+    "playerId": "{{playerId}}",
+    "type": {{deposit}},
+    "amount": 100
+}
+
+###
+POST {{Greentube.Wallet.Api_HostAddress}}/api/wallet/transaction
+Content-Type: application/json
+{
+    "playerId": "{{playerId}}",
+    "type": {{win}},
+    "amount": 100
+}
+
+###
+POST {{Greentube.Wallet.Api_HostAddress}}/api/wallet/transaction
+Content-Type: application/json
+{
+    "playerId": "{{playerId}}",
+    "type": {{stake}},
+    "amount": 100
+}
+
+###
+GET {{Greentube.Wallet.Api_HostAddress}}/api/wallet/{{playerId}}/transactions
+Content-Type: application/json
+{
+    "playerId": "{{playerId}}",
+    "type": {{stake}},
+    "amount": 100
+}

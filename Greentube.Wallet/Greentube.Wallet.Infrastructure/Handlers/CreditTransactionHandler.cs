@@ -17,14 +17,17 @@ namespace Greentube.Wallet.Infrastructure.Handlers
             _transactionRepository = transactionRepository;
         }
 
-        public TransactionResultDto Handle(CreditTransactionCommand command)
+        public TransactionResultDto? Handle(CreditTransactionCommand command)
         {
             if (_transactionRepository.TransactionExists(command.TransactionId))
             {
-                return new TransactionResultDto { TransactionId = command.TransactionId, Accepted = true };
+                return new TransactionResultDto { TransactionId = command.TransactionId, Accepted = true, Message = "Transaction have been already accepted." };
             }
 
             var player = _playerRepository.GetPlayer(command.PlayerId);
+            if (player is null)
+                return null;
+
             var newBalance = player.Balance;
 
             switch (command.Type)
@@ -42,7 +45,7 @@ namespace Greentube.Wallet.Infrastructure.Handlers
 
             if (newBalance < 0)
             {
-                return new TransactionResultDto { TransactionId = command.TransactionId, Accepted = false };
+                return new TransactionResultDto { TransactionId = command.TransactionId, Accepted = false, Message = "Insufficient funds for this transaction." };
             }
 
             player.Balance = newBalance;
@@ -56,7 +59,7 @@ namespace Greentube.Wallet.Infrastructure.Handlers
             };
 
             _transactionRepository.AddTransaction(transaction);
-            return new TransactionResultDto { TransactionId = command.TransactionId, Accepted = true };
+            return new TransactionResultDto { TransactionId = transaction.Id, Accepted = true };
         }
     }
 }

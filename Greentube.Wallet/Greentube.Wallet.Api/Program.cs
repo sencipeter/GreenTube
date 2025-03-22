@@ -1,4 +1,5 @@
 
+using Greentube.Wallet.Api.Middleware;
 using Greentube.Wallet.Core.Handlers;
 using Greentube.Wallet.Core.Repositories;
 using Greentube.Wallet.Infrastructure;
@@ -29,6 +30,7 @@ namespace Greentube.Wallet.Api
 
 
             var app = builder.Build();
+            app.UseMiddleware<GlobalExceptionMiddleware>();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
